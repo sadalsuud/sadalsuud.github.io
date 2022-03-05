@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Actividad 3 - modulo 2</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="asset/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SENA</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="#">Sign out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="lnkPunto1" onclick="mostrar('punto1', this.id)">
+                                <span data-feather="play"></span>
+                                Punto 1
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto2')">
+                                <span data-feather="play"></span>
+                                Punto 2
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto3')">
+                                <span data-feather="play"></span>
+                                Punto 3
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto4')">
+                                <span data-feather="play"></span>
+                                Punto 4
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto5')">
+                                <span data-feather="play"></span>
+                                Punto 5
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto6')">
+                                <span data-feather="play"></span>
+                                Punto 6
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto7')">
+                                <span data-feather="play"></span>
+                                Punto 7
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto8')">
+                                <span data-feather="play"></span>
+                                Punto 8
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto9')">
+                                <span data-feather="play"></span>
+                                Punto 9
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="mostrar('punto10')">
+                                <span data-feather="play"></span>
+                                Punto 10
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <!-- punto 1 -->
+                <div id="punto1" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 1</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que tome tres números y si el primero es positivo
+                                calcule el producto de los otros dos, y en otro caso calcule la suma y muestre el
+                                resultado en la pantalla.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el primer número:</label>
+                                    <input type="number" id="num_1" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el segundo número:</label>
+                                    <input type="number" id="num_2" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el tercer número:</label>
+                                    <input type="number" id="num_3" class="form-control">
+                                </div>
+                                <button class="btn btn-primary" onclick="punto_1()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <p id="resultado"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- punto 2 -->
+                <div id="punto2" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 2</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que tome tres números enteros y decida si uno de
+                                ellos coincide con la suma de los otros dos.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el primer número:</label>
+                                    <input type="number" id="num1" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el segundo número:</label>
+                                    <input type="number" id="num2" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Ingre el tercer número:</label>
+                                    <input type="number" id="num3" class="form-control">
+                                </div>
+                                <button class="btn btn-primary" onclick="punto_2()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <!-- <h3>El resultado es:</h3> -->
+                                <p id="operacion"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 3 -->
+                <div id="punto3" style="display: none;">
+
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 3</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que imprima y sume la serie de números múltiplos de
+                                3 hasta 100, es decir, 3, 6, 9, 12, ... 99 (usar ciclos). Realizar la traza para las
+                                primeras 5 iteraciones.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <button class="btn btn-primary" onclick="punto_3()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="multiplos"></textarea>
+                                <p id="sumatoria"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 4 -->
+                <div id="punto4" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 4</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que tome tres números y si el primero es positivo
+                                calcule el producto de los otros dos, y en otro caso calcule la suma y muestre el
+                                resultado en la pantalla.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <button class="btn btn-primary" onclick="punto_4()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="potencias"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 5 -->
+                <div id="punto5" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 5</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que sume los números pares comprendidos entre 50 y
+                                200, inclusive.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <button class="btn btn-primary" onclick="punto_5()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="sumatoria_p5"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 6 -->
+                <div id="punto6" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 6</h2>
+                            <p class="g-col-6">
+                                Una temperatura Celsius (centígrados) puede ser convertida a una temperatura equivalente
+                                Fahrenheit de acuerdo con la siguiente fórmula:
+                            </p>
+                            <img src="https://www.spanishged365.com/wp-content/uploads/2018/08/celcius_1_1.jpg"
+                                class="img-fluid" alt="9/5 multiplica la diferencia entre grados farenheit menos 32 ">
+                            <p>
+                                Codifique en JavaScript un algoritmo que lea la temperatura en grados Celsius y la
+                                escriba en Fahrenheit.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label for="temp_c">Temperatura en °C: </label>
+                                <input type="number" id="temp_c">
+                                <button class="btn btn-primary" onclick="punto_6()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="temperatura"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 7 -->
+                <div id="punto7" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 7</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que lea la hora de un día de notación de 24 horas y
+                                la respuesta en notación de 12 horas, por ejemplo, si la entrada es 13, la salida será 1
+                                p.m.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label for="hora">Hora en formato 24h: </label>
+                                <input type="number" id="hora">
+                                <button class="btn btn-primary" onclick="punto_7()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="hora_nueva"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 8 -->
+                <div id="punto8" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 8</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo para crear un vector de cinco elementos de cadenas
+                                de caracteres, inicializa el vector con datos leídos por el teclado, copie los elementos
+                                del vector en otro vector, pero en orden inverso, y muéstrelo en la pantalla.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label>Digite cinco palabras separadas por coma (,)</label>
+                                <textarea class="form-control" id="alderecho"></textarea>
+                                <button class="btn btn-primary" onclick="punto_8()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="alrevez"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 9 -->
+                <div id="punto9" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 9</h2>
+                            <p class="g-col-6">
+                                Codifique en JavaScript un algoritmo que dado un vector con cinco notas obtenidas por un
+                                alumno (comprendidas entre 0 y 10). A continuación, debe mostrar todas las notas, la
+                                nota promedio, la nota más alta que ha sacado y la menor.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <label>Digite cinco notas separadas por coma (,)</label>
+                                <textarea class="form-control" id="notas"></textarea>
+                                <button class="btn btn-primary" onclick="punto_9()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>Las notas son:</h3>
+                                <textarea class="form-control" id="boletin_notas"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- punto 10 -->
+                <div id="punto10" style="display: none;">
+                    <div
+                        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+                        <div class="grid">
+                            <h2 class="h2 g-col-6">Punto 10</h2>
+                            <p class="g-col-6">
+                                10. Codifique en JavaScript un algoritmo que:
+                                Data una matriz bidimensional de longitud 3x4.
+                                Sume todos los elementos de cada fila, visualizando los resultados en pantalla.
+                                Sume todos los elementos de cada columna y que los resultados se muestren en la
+                                pantalla.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <button class="btn btn-primary" onclick="punto_10()">Run!</button>
+                            </div>
+                            <div class="col">
+                                <h3>El resultado es:</h3>
+                                <textarea class="form-control" id="tabla"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="ejercicios.js"></script>
+
+</body>
+
+</html>
